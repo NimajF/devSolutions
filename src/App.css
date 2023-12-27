@@ -1,0 +1,239 @@
+.App{
+  display: flex;
+  flex-direction: column;
+}
+nav{
+  height: 68px;
+  background-color: #1b1b1f;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 1rem; padding-right: 1rem;
+  color: aliceblue;
+  font-family: Inter;
+  transition: all .2s ease-in;
+}
+nav div button{
+  background: transparent;
+  border: none;
+  font-size: 14px;
+  font-family: Inter;
+  margin-right: .8rem;
+  transition: .2s ease-in;
+}
+nav div button:hover{
+  color: rgb(87, 228, 77);
+  cursor: pointer;
+}
+nav.relative {
+  transition: all 0.2s ease-in-out;
+}
+
+nav.stickyNavbar {
+  position: sticky;
+  background-color: #202023;
+  top: 0;
+  z-index: 5;
+}
+
+footer{
+  width: 100%;
+  background-color: #2e2e3549;
+  height: 200px;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleDiv{
+  align-self: center;
+  flex-direction: column;
+  height: 60vh;
+  width: 80%;
+  padding: 3rem;
+  display: flex;
+  
+}
+
+.homeButtons{
+  color: blue;
+  margin-top: 1rem;
+}
+
+.homeButtons button{
+  margin-right: 20px;
+  font-family: Inter;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+.aboutMeButton, .contactButton{
+  background-color: rgb(86, 196, 59);
+}
+.homeButtons button:first-child:hover{
+  background-color: rgb(92, 209, 63);
+}
+.homeButtons button:last-child{
+  background-color: rgb(86, 196, 59);
+}
+.homeButtons button:last-child:hover{
+  background-color: green;
+}
+.projectsButton, .howToBuyButton{
+  background-color: #2e2e35;
+}
+
+section{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+section div{
+  width: 80%;
+  margin-bottom: 5rem;
+}
+section div p{
+  color: rgba(240, 248, 255, 0.849);
+  margin-left: 10px;
+}
+
+.homeCards{
+  width: 100%;
+  padding: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.card{
+  background-color: #202127;
+  width: 25%;
+  border-radius: 5px;
+  height: 170px;
+  padding: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  transition: .2s ease-in;
+}
+.card:hover{
+  transform: scale(1.03);
+}
+.card span{
+  margin: 0;
+}
+.card svg{
+  font-size: 32px;
+  margin: 0;
+  background-color: #37373c82;
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.card article{
+  margin-left: -8px;
+}
+.card article p:first-child{
+  font-weight: 600;
+  margin-bottom: -.2rem;
+}
+.card article p:last-child{
+  font-size: 14px;
+  color: rgba(245, 245, 245, 0.575);
+}
+
+.flex-div{
+  padding: 3rem;
+  display: flex;
+  border: 1px solid rgba(245, 245, 245, 0.16);
+  border-radius: 8px;
+  gap: 2rem;
+}
+.contact span{
+  display: flex;
+  flex-wrap: wrap;
+  height: 120px;
+  padding: 1rem;
+  background-color:#202127;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  gap: 20px;
+}
+.contact h4{
+  margin: 0;
+  background: #646CFF;
+background: linear-gradient(to right, #646CFF 0%, #63FF69 100%);
+background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+.contact svg{
+  align-self: center;
+  font-size: 64px;
+  background-color:#2e2e35cc;
+  padding: 10px;
+  border-radius: 8px;
+}
+.contact b{
+  color: rgb(99, 237, 86);
+}
+.formContainer{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+form{
+  width: 100%;
+  justify-self: center;
+  background-color: #202127;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  padding: 3rem;
+  gap: .5rem;
+  border-radius: 8px;
+}
+form input, textarea{
+  margin-bottom: 1rem;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #686ba6;
+  outline: none;
+  color: rgba(255, 255, 255, 0.543);
+  font-family: Inter;
+  background-color: #1b1b1f;
+}
+form label{
+  font-weight: 600;
+}
+form input:focus, textarea:focus{
+  border-color: #646cff;
+}
+form button{
+  margin-right: 20px;
+  width: 100px;
+  background-color: #646cff;
+  font-family: Inter;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+form textarea{
+  resize: vertical;
+}
