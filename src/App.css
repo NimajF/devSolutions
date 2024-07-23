@@ -31,9 +31,11 @@ nav.relative {
 
 nav.stickyNavbar {
   position: sticky;
-  background-color: #202023;
+  background-color: #202023d1;
+  backdrop-filter: blur(10px);
   top: 0;
   z-index: 5;
+  height: 75px;
 }
 
 footer{
@@ -45,6 +47,27 @@ footer{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+footer div{
+  display: flex;
+}
+footer div ul{
+  list-style: none;
+}
+footer div ul li{
+  display: flex;
+  margin-top: 2px;
+}
+footer div ul li a{
+  font-size: 14px;
+  color: rgb(205, 193, 193);
+}
+footer li a:hover, footer li a:hover svg{
+  color: rgb(93, 181, 93);
+}
+footer ul li svg{
+  margin-right: .5rem;
+  align-self: center;
 }
 
 .titleDiv{
@@ -88,6 +111,9 @@ footer{
 .projectsButton, .howToBuyButton{
   background-color: #2e2e35;
 }
+.projectsButton:hover, .howToBuyButton:hover{
+  background-color: #333339;
+}
 
 section{
   display: flex;
@@ -112,11 +138,13 @@ section div p{
   gap: 1rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin-bottom: 10rem;
 }
 .card{
   background-color: #202127;
   width: 25%;
   border-radius: 5px;
+  border: 1px solid transparent;
   height: 170px;
   padding: 1rem;
   display: flex;
@@ -124,10 +152,12 @@ section div p{
   flex-direction: column;
   padding-bottom: 0;
   margin-bottom: 0;
-  transition: .2s ease-in;
+  transition: .1s ease-in;
 }
 .card:hover{
   transform: scale(1.03);
+  background-color: #232429;
+  border: 1px solid rgb(86, 196, 59);
 }
 .card span{
   margin: 0;
@@ -160,6 +190,91 @@ section div p{
   border-radius: 8px;
   gap: 2rem;
 }
+
+.aboutMe{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.aboutMe div:first-child{
+  width: 25%;
+  background-color: #2e2e35;
+}
+.aboutMe div:last-child{
+  width: 50%;
+
+}
+.projects{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.projects .projectsCards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 0;
+}
+.card-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+.projects .projectsCards div{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  /* From https://css.glass */
+  /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.016);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+.card-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 12px;
+}
+.projectsCards a{
+  align-self: flex-end;
+  background-color: rgb(74, 32, 119);
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Inter;
+  font-weight: inherit;
+  cursor: pointer;
+}
+.projectsCards a:hover{
+  background-color: rgb(89, 43, 138);
+  color: #fff;
+}
+
+
+.howToBuy{
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
+  gap: 10rem;
+}
+.howToBuy div:first-child{
+  width: 25%;
+  background-color: #2e2e35;
+}
+.howToBuy div:last-child{
+  width: 50%;
+}
+
 .contact span{
   display: flex;
   flex-wrap: wrap;
@@ -211,7 +326,7 @@ form input, textarea{
   border-radius: 5px;
   border: 1px solid #686ba6;
   outline: none;
-  color: rgba(255, 255, 255, 0.543);
+  color: rgba(255, 255, 255, 0.675);
   font-family: Inter;
   background-color: #1b1b1f;
 }

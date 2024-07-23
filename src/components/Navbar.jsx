@@ -1,6 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
-export default function Navbar(){
+export default function Navbar({onScroll, refs}){
     const [sticky, setSticky] = useState("relative");
 
     useEffect(() => {
@@ -24,13 +24,13 @@ export default function Navbar(){
                 ASDASDASD
             </span>
             <div>
-                <button>
+                <button onClick={() => onScroll(refs.section1Ref)}>
                     Proyectos
                 </button>
-                <button>
+                <button onClick={() => onScroll(refs.section2Ref)}>
                     Compras
                 </button>
-                <button>
+                <button onClick={() => onScroll(refs.section3Ref)}>
                     Contacto
                 </button>
 
